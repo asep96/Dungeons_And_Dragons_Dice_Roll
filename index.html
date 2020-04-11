@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html>
+<head>
+	<title>DnD Dice Roller</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1>DnD Dice Roller</h1><br>
+	<h3>To roll a dice with custom sides, enter the number of sides into the text box and click the "custom roll" button!</h3>
+	<br>
+	<div class="container">
+		<div class="roll-button-div"><input type="button" onclick="roll(4)" id="roll-button" value="d4"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(6)" id="roll-button" value="d6"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(8)" id="roll-button" value="d8"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(10)" id="roll-button" value="d10"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(12)" id="roll-button" value="d12"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(20)" id="roll-button" value="d20"></div>
+		<div class="roll-button-div"><input type="button" onclick="roll(100)" id="roll-button" value="d100"></div>
+		<div class="roll-button-div"><input type="button" onclick="customRoll()" id="roll-button" value="Custom Roll">
+		<input type="text" name="other-dice-sides" id="input-bar" onfocus="this.value=''"></div>
+	</div><br>
+	<div id="result">
+		
+	</div>
+	<script src="dndDiceRoll.js"></script>
+</body>
+</html>
