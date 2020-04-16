@@ -3,18 +3,18 @@ body {
 	background-color: #117265;
 }
 
-h1, h3, #result {
+h1, #result {
 	display: flex;
 	justify-content: center;
-	color: #FFAA00;
 }
 
-h1, h3, #result, #roll-button {
+h1, #result, #roll-button, #help-button {
 	font-family: Arial, Helvetica, "sans-serif"; 
 	font-weight: bold;
+	color: #FFBC43;
 }
 
-#roll-button:hover{
+#help-button:hover, #roll-button:hover{
 	color: #FFAA00;
 	background-color: #B68F1B;
 	padding: 35px;
@@ -22,11 +22,10 @@ h1, h3, #result, #roll-button {
 	transition-duration: 0.5s;
 }
 
-#roll-button {
+#help-button, #roll-button {
 	padding: 25px;
 	font-size: 1.5em;
-	color: #FFAA00;
-	background-color: #117265;
+	background-color: #008775;
 	border-color: #000000;
 	margin: 5px;
     transition: all 0.5s ease; 
@@ -44,7 +43,3 @@ h1, h3, #result, #roll-button {
 	padding: 50px;
 	font-size: 4em;
 }
-
-
-
-
