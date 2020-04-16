@@ -8,7 +8,40 @@ function customRoll() {
 	}
 }
 
+//keeps track of results for duplicates
+let resultArray = [];
+
 function roll(numberOfSides) {
+	//have style set to 4em each time in case the user selected help beforehand
+	document.getElementById("result").style.fontSize = "4em";
+	document.getElementById("result").style.color = "#FFBC43"
 	let result = Math.floor((Math.random() * numberOfSides) + 1);
 	document.getElementById("result").innerHTML = result;
+	//logic for determining if the user had a duplicated result
+	//only a max of two results are kept stored in the array 
+	resultArray.push(result);
+	if(resultArray[0] == resultArray[1]) {
+		document.getElementById("result").style.color = "#F84859";
+		arrayTrim();
+	}
+	else if (resultArray.length == 2) {
+		arrayTrim();
+	}
+}
+
+//ensures only two results are in the array
+function arrayTrim() {
+	resultArray[0] = resultArray[1];
+	resultArray.splice(-1,1)
+}
+
+function displayHelp() {
+	//set color of text in case the user had a different color showing beforehand
+	document.getElementById("result").style.color = "#FFBC43"
+	document.getElementById("result").style.fontSize = "1.5em";
+	document.getElementById("result").innerHTML = "Just click on the button for the corresponding " + 
+	"dice you want to roll. For example, if you want to roll a 6 sided die, click the 'd6' button. " +
+	"To roll a dice with a number of sides not listed, just type your number into the text box and click " + 
+	"custom roll. If you notice the result of your roll change color, that means you rolled the same " +
+	"number again. Good luck!"
 }
