@@ -8,7 +8,9 @@
 </head>
 <body>
 	<h1>DnD Dice Roller</h1><br>
-	<h3>To roll a dice with custom sides, enter the number of sides into the text box and click the "custom roll" button!</h3>
+	<div class="help-container">
+		<div><input type="button" onclick="displayHelp()" value="click for help" id="help-button"></div>
+	</div>
 	<br>
 	<div class="container">
 		<div class="roll-button-div"><input type="button" onclick="roll(4)" id="roll-button" value="d4"></div>
