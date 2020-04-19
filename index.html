@@ -3,13 +3,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <html>
 <head>
-	<title>DnD Dice Roller</title>
+	<title>Dungeons and Dragons Dice Roller</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>DnD Dice Roller</h1><br>
+	<h1>Dungeons and Dragons Dice Roller</h1><br>
 	<div class="help-container">
 		<div><input type="button" onclick="displayHelp()" value="click for help" id="help-button"></div>
+	</div>
+	<br>
+	<div class="multi-roll-container">
+		<label for="num-of-rolls">How many dice should be rolled:</label>
+  		<select id="num-of-rolls" name="num-of-rolls">
+    		<option value="1">1</option>
+    		<option value="2">2</option>
+		    <option value="3">3</option>
+		    <option value="4">4</option>
+		    <option value="5">5</option>
+		    <option value="6">6</option>
+		    <option value="7">7</option>
+		    <option value="8">8</option>
+		    <option value="9">9</option>
+		    <option value="10">10</option>
+  		</select>
 	</div>
 	<br>
 	<div class="container">
